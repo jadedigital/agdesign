@@ -1,0 +1,65 @@
+$jade: #3DE0BF;
+$ruby: #E03D4D;
+$silver: #F2F2F2;
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#cover { 
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#particles { 
+    height: 100%; 
+    width: 100%;
+    z-index: 901;
+    position: absolute;
+    background-color: $jade;
+}
+
+.overlay {
+    z-index: 902;
+    position: absolute;
+}
+
+.overlay-polygon {
+    fill: $silver;
+}
+
+.logo {  
+    /*background-image: url("../images/ag_design.png");*/
+    position: absolute;
+    z-index: 903;
+    width:30%;
+    padding-top:60px;
+    
+    img {
+        width:250px;
+        display: block;
+        margin: 8px auto;
+    }
+
+    p {
+        margin: 5px auto;
+        width: 90%;
+    }
+}
+
+.btn-alpha {
+    background-color: $ruby;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-radius: 20px;
+    margin: 15px auto;
+    width: 60%;
+}

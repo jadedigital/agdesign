@@ -1,0 +1,51 @@
+{
+  "name": "agdesign",
+  "version": "1.0.0",
+  "description": "AG Design website",
+  "main": "index.html",
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "lint": "standard src/js",
+    "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -m -o dist/js/app.js",
+    "imagemin": "imagemin src/images/* -o dist/images",
+    "icons": "svgo -f src/images/icons && mkdir -p dist/images && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
+    "serve": "browser-sync start --server 'dist' --files 'dist' --reloadDelay=2000",
+    "pug": "pug < src/index.pug > dist/index.html",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:js": "npm run lint && npm run uglify",
+    "build:images": "npm run imagemin && npm run icons",
+    "build:html": "npm run pug",
+    "build:all": "npm run build:css && npm run build:js && npm run build:images",
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
+    "watch:js": "onchange 'src/js/*.js' -- npm run build:js",
+    "watch:images": "onchange 'src/images' -- npm run build:images",
+    "watch:html": "onchange 'src/*.pug' -- npm run build:html",
+    "watch:all": "npm-run-all -p serve watch:css watch:js watch:images watch:html",
+    "clean": "rimraf dist/{css/*,js/*,images/*}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jadedigital/agdesign.git"
+  },
+  "author": "Jade Digital",
+  "license": "MIT",
+  "bugs": {
+    "url": "git@github.com:jadedigital/agdesign.git/issues"
+  },
+  "homepage": "https://jadedigital.ca",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "browser-sync": "^2.18.2",
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^3.13.0",
+    "npm-run-all": "^3.1.1",
+    "onchange": "^3.0.2",
+    "postcss-cli": "^2.6.0",
+    "pug": "^2.0.0-rc.1",
+    "standard": "^8.6.0",
+    "svg-sprite-generator": "0.0.7",
+    "svgo": "^0.7.1",
+    "uglify-js": "^2.7.4"
+  }
+}

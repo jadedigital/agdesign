@@ -1,0 +1,35 @@
+doctype html
+html(lang="en").no-js 
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        title="AG Design"
+        meta(name="description" content="")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+
+        link(rel="apple-touch-icon" href="apple-touch-icon.png")
+        // Place favicon.ico in the root directory
+        link(rel="stylesheet" href="css/main.css")
+
+    body
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        // Add your site or application content here
+        #cover
+            #particles
+            a.logo
+                img(src="/images/ag_design.png")
+                p.
+                    Aaron Greene <br>
+                    Web design and Development, Logo Design and Branding, Domain Hosting and Management
+                p.
+                    Making design easy & enjoyable so you can focus on building your business.
+                button.btn-alpha Get Started
+            svg(class="overlay" height="100%" width="40%" viewBox="0 0 100 100" preserveAspectRatio="none")
+                polygon(class="overlay-polygon" points="0,0 100,0 50,100 0,100")
+        p Hello earth! This is Jade Digital's Boilerplate.
+
+        script(src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js")
+        script(src="js/app.js")
