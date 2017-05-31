@@ -20,7 +20,7 @@ html(lang="en").no-js
         #cover
             #particles
             a.logo
-                img(src="/images/ag_design.png")
+                img(src="images/ag_design.png")
                 p.
                     Aaron Greene <br>
                     Web design and Development, Logo Design and Branding, Domain Hosting and Management
@@ -29,7 +29,40 @@ html(lang="en").no-js
                 button.btn-alpha Get Started
             svg(class="overlay" height="100%" width="40%" viewBox="0 0 100 100" preserveAspectRatio="none")
                 polygon(class="overlay-polygon" points="0,0 100,0 50,100 0,100")
-        p Hello earth! This is Jade Digital's Boilerplate.
-
-        script(src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js")
+        .services
+            h3 Full-featured, right out of the box
+            .wrapper
+                .one-service
+                    .service-circle
+                        i.fa.fa-desktop.fa-2x.fa-inverse(aria-hidden='true')
+                    h4 Cross-platform
+                    p Sectional works across operating systems. You can use it on OS X, Windows, or Linux.
+                .one-service
+                    .service-circle
+                        i.fa.fa-search.fa-2x.fa-inverse(aria-hidden='true')
+                    h4 Searchable
+                    p Search for the section you're looking for. Sectional filters as you type
+                .one-service
+                    .service-circle
+                        i.fa.fa-sort-amount-asc.fa-2x.fa-inverse(aria-hidden='true')
+                    h4 Sortable
+                    p Sort sections by weight, depth, width, or any other section property.
+            .wrapper
+                .one-service
+                    .service-circle
+                        i.fa.fa-share.fa-2x.fa-inverse(aria-hidden='true')
+                    h4 Export
+                    p Export your desired section properties for printing or importing into STAAD.pro 
+                .one-service
+                    .service-circle
+                        i.fa.fa-wrench.fa-2x.fa-inverse(aria-hidden='true')
+                    h4 Custom Sections
+                    p Design your own custom section. Sectional will calculate the properties for you.
+                .one-service
+                    .service-circle
+                        i.fa.fa-tags.fa-2x.fa-inverse(aria-hidden='true')
+                    h4 Tags
+                    p Tag sections based on the project or structure you're working on.
+                    
         script(src="js/app.js")
+        script(src='https://use.fontawesome.com/ef4ebaee1a.js')

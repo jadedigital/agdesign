@@ -1,3 +1,6 @@
+@import 'mixins';
+@import 'font-awesome';
+
 $jade: #3DE0BF;
 $ruby: #E03D4D;
 $silver: #F2F2F2;
@@ -62,4 +65,45 @@ body, html {
     border-radius: 20px;
     margin: 15px auto;
     width: 60%;
+}
+
+.services {
+    padding: 60px 0;
+    background-color: $silver;
+
+    h3 {
+        margin: 0;
+        font-weight: 300;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .wrapper {
+        padding-top: 40px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
+
+.one-service {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.5;
+    @include not-phone {
+    	width: 33%;
+    }
+}
+
+.service-circle {
+    border-radius: 999px;
+    margin: 0 auto;
+    height: 80px;
+    width: 80px;
+    background-color: $ruby;
+
+    i {
+        padding-top: 24px;
+    }
 }

@@ -16,13 +16,14 @@
     "build:js": "npm run lint && npm run uglify",
     "build:images": "npm run imagemin && npm run icons",
     "build:html": "npm run pug",
-    "build:all": "npm run build:css && npm run build:js && npm run build:images && npm run build:html",
+    "build:fonts": "mkdir -p dist/fonts && cp src/fonts/* dist/fonts/",
+    "build:all": "npm run build:css && npm run build:js && npm run build:images && npm run build:html && npm run build:fonts",
     "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
     "watch:js": "onchange 'src/js/*.js' -- npm run build:js",
     "watch:images": "onchange 'src/images' -- npm run build:images",
     "watch:html": "onchange 'src/*.pug' -- npm run build:html",
     "watch:all": "npm-run-all -p serve watch:css watch:js watch:images watch:html",
-    "clean": "rimraf dist/{css/*,js/*,images/*}"
+    "clean": "rimraf dist/{css/*,js/*,images/*,*.html}"
   },
   "repository": {
     "type": "git",
