@@ -44,6 +44,7 @@
     "onchange": "^3.0.2",
     "postcss-cli": "^2.6.0",
     "pug": "^2.0.0-rc.1",
+    "pug-cli": "^1.0.0-alpha6",
     "standard": "^8.6.0",
     "svg-sprite-generator": "0.0.7",
     "svgo": "^0.7.1",
