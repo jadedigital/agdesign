@@ -6,104 +6,169 @@ $ruby: #E03D4D;
 $silver: #F2F2F2;
 
 body, html {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 #cover { 
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #particles { 
-    height: 100%; 
-    width: 100%;
-    z-index: 901;
-    position: absolute;
-    background-color: $jade;
+  height: 100%; 
+  width: 100%;
+  z-index: 901;
+  position: absolute;
+  background-color: $jade;
 }
 
 .overlay {
-    z-index: 902;
-    position: absolute;
+  z-index: 902;
+  position: absolute;
 }
 
 .overlay-polygon {
-    fill: $silver;
+  fill: $silver;
 }
 
-.logo {  
-    /*background-image: url("../images/ag_design.png");*/
-    position: absolute;
-    z-index: 903;
-    width:30%;
-    padding-top:60px;
-    
-    img {
-        width:250px;
-        display: block;
-        margin: 8px auto;
-    }
+.big-logo {  
+  /*background-image: url("../images/ag_design.png");*/
+  position: absolute;
+  z-index: 903;
+  width:30%;
+  padding-top:60px;
+  
+  img {
+    width:250px;
+    display: block;
+    margin: 8px auto;
+  }
 
-    p {
-        margin: 5px auto;
-        width: 90%;
-    }
+  p {
+    margin: 5px auto;
+    width: 90%;
+  }
 }
 
 .btn-alpha {
-    background-color: $ruby;
-    border: none;
-    color: white;
-    padding: 10px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    border-radius: 20px;
-    margin: 15px auto;
-    width: 60%;
+  background-color: $ruby;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  border-radius: 20px;
+  margin: 15px auto;
+  width: 60%;
 }
 
 .services {
-    padding: 60px 0;
-    background-color: $silver;
+  padding: 60px 0;
+  background-color: $silver;
 
-    h3 {
-        margin: 0;
-        font-weight: 300;
-        font-size: 30px;
-        text-align: center;
-    }
+  h3 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+  }
 
-    .wrapper {
-        padding-top: 40px;
-        width: 90%;
-        margin: 0 auto;
-    }
+  .wrapper {
+    padding-top: 40px;
+    width: 90%;
+    margin: 0 auto;
+  }
 
 }
 
 .one-service {
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-    line-height: 1.5;
-    @include not-phone {
-    	width: 33%;
-    }
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.5;
+  @include not-phone {
+    width: 33%;
+  }
 }
 
 .service-circle {
-    border-radius: 999px;
-    margin: 0 auto;
-    height: 80px;
-    width: 80px;
-    background-color: $ruby;
+  border-radius: 999px;
+  margin: 0 auto;
+  height: 80px;
+  width: 80px;
+  background-color: $ruby;
 
-    i {
-        padding-top: 24px;
-    }
+  i {
+    padding-top: 24px;
+  }
+}
+
+/* *********************************
+           Nav Bar
+  ********************************** */
+/* *********************************
+           Variables
+  ********************************** */
+$navbar-height: 50px;
+$big-logo-padding: 15px; // adjust these 2 values
+$small-logo-padding: 2px; // of bottom padding to look nice
+
+.navbar {
+  min-height: 50px;
+  background: rgba(62,195,246,0);
+  border-bottom: none;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  overflow:hidden;
+}
+
+.navbar-collapse {
+  height: auto;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float:right;
+  li {
+    display: inline-block;
+    height: 33px;
+    vertical-align: top;
+    position: relative;
+  }
+  a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: $ruby;
+  }
+}
+.navbar-toggle {
+  @include not-phone {
+    display:none;
+  }
+}
+
+
+/* *********************************
+           Toolbar Logo
+  ********************************** */
+.small-logo-container {
+  padding-top: $navbar-height;
+  height: $navbar-height;
+  overflow: hidden;
+  position: absolute;
+}
+
+.small-logo {
+  color: white;
+  font-size: 2.5em;
+  padding-bottom: $small-logo-padding;
 }
