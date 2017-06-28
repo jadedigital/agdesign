@@ -10,6 +10,7 @@ html(lang="en").no-js
     link(rel="apple-touch-icon" href="apple-touch-icon.png")
     // Place favicon.ico in the root directory
     link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css")
 
   body
     <!--[if lte IE 9]>
@@ -25,17 +26,17 @@ html(lang="en").no-js
             span.icon-bar
             span.icon-bar
           .small-logo-container
-            a.small-logo(href="#") Small Logo
+            img.small-logo(src="images/ag_design.png")
         .navbar-collapse
           ul.nav-links
             li.active
-              a(href="#") Active
+              a(href="#services") Services
             li 
-              a.linky(href="#") Link
+              a.linky(href="#") Portfolio
             li 
-              a(href="#") Link
+              a(href="#") About
             li 
-              a(href="#") Link
+              a(href="#") Contact
 
     #cover
       #particles
@@ -48,9 +49,9 @@ html(lang="en").no-js
           Making design easy & enjoyable so you can focus on building your business.
         button.btn-alpha Get Started
       svg(class="overlay" height="100%" width="40%" viewBox="0 0 100 100" preserveAspectRatio="none")
-        polygon(class="overlay-polygon" points="0,0 100,0 50,100 0,100")
-    .services
-      h3 Full-featured, right out of the box
+        polygon(class="overlay-polygon" points="0,0 100,0 30,100 0,100")
+    #services.section
+      h1 Services
       .wrapper
         .one-service
           .service-circle
@@ -83,6 +84,18 @@ html(lang="en").no-js
             i.fa.fa-tags.fa-2x.fa-inverse(aria-hidden='true')
           h4 Tags
           p Tag sections based on the project or structure you're working on.
+
+    #about.row.center-xs.section
+      .col-xs-6
+        h1 About AG Design
+        p Aaron Greene is a web designer located in St. John’s, NL. I develop custom, intelligent web design solutions that are tailored to your business’s needs. I help business owners grow their user base and ultimately, increase revenue.
+        p I make sure your websites and their editing tools are kept up to date, running smooth and secure. I’m passionate about helping my clients grow, and ready to support your online efforts as you do.
+    
+    #contact.row.center-xs.section
+      .col-xs-6
+        h1 Ready to get started?
+        p Let’s talk about your project. Contact us today and we’ll get the ball rolling!
+        btn Get in Touch
 
     script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")          
     script(src="js/app.js")

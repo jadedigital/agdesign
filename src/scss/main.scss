@@ -4,10 +4,13 @@
 $jade: #3DE0BF;
 $ruby: #E03D4D;
 $silver: #F2F2F2;
+$smoke: #585858;
+$moonlight: #192024;
 
 body, html {
   height: 100%;
   margin: 0;
+  font: normal 100%/1.5 Walsheim,Futura,Trebuchet MS,sans-serif;
 }
 
 #cover { 
@@ -67,17 +70,7 @@ body, html {
   width: 60%;
 }
 
-.services {
-  padding: 60px 0;
-  background-color: $silver;
-
-  h3 {
-    margin: 0;
-    font-weight: 300;
-    font-size: 30px;
-    text-align: center;
-  }
-
+#services {
   .wrapper {
     padding-top: 40px;
     width: 90%;
@@ -106,6 +99,28 @@ body, html {
   i {
     padding-top: 24px;
   }
+}
+
+.section {
+  padding: 60px 0;
+  background-color: $silver;
+  h1 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+#about {
+  padding: 120px 0;
+  background-color: $moonlight;
+  color: #fff;
+}
+
+#contact {
+  padding: 120px 0;
+  background-color: $silver;
 }
 
 /* *********************************
@@ -138,6 +153,8 @@ $small-logo-padding: 2px; // of bottom padding to look nice
   margin: 0;
   padding: 0;
   float:right;
+  margin-right: 100px;
+  padding-top: 10px;
   li {
     display: inline-block;
     height: 33px;
@@ -146,8 +163,10 @@ $small-logo-padding: 2px; // of bottom padding to look nice
   }
   a {
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 30px;
     color: $ruby;
+    font-size: 24px;
+    font-weight: bold;
   }
 }
 .navbar-toggle {
@@ -168,7 +187,6 @@ $small-logo-padding: 2px; // of bottom padding to look nice
 }
 
 .small-logo {
-  color: white;
-  font-size: 2.5em;
-  padding-bottom: $small-logo-padding;
+  height:($navbar-height - 10px);
+  margin: 5px 0;
 }
