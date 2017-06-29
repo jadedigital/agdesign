@@ -3,9 +3,10 @@
 
 $jade: #3DE0BF;
 $ruby: #E03D4D;
-$silver: #F2F2F2;
+$silver: #f6fdff;
 $smoke: #585858;
-$moonlight: #192024;
+$moonlight: #2b373e;
+$azure: #1E7DAD;
 
 body, html {
   height: 100%;
@@ -25,7 +26,7 @@ body, html {
   width: 100%;
   z-index: 901;
   position: absolute;
-  background-color: $jade;
+  background-color: $moonlight;
 }
 
 .overlay {
@@ -74,8 +75,8 @@ body, html {
   z-index: 904;
   position: absolute;
   right: 0px;
-  height: 70%;
-  margin-top: 10%;
+  height: 80%;
+  margin-top: 8%;
   
   .wrapper {
     position: relative;
@@ -95,16 +96,65 @@ body, html {
 }
 
 .line-one {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s linear;
+  stroke-dasharray: 2100;
+  stroke-dashoffset: 2100;
+  animation: dash 6s linear infinite;
   
   @keyframes dash {
-    from {stroke-dashoffset: 1000;}
-    to {stroke-dashoffset: 0;}
+    0% {stroke-dashoffset: 2100;}
+    33% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: 0;}
   }
 }
 
+.line-two {
+  stroke-dasharray: 2100;
+  stroke-dashoffset: 2100;
+  animation: dash2 6s 2s linear infinite;
+  @keyframes dash2 {
+    0% {stroke-dashoffset: 2100;}
+    33% {stroke-dashoffset: 0;}
+    66% {stroke-dashoffset: 0;}
+    67% {stroke-dashoffset: 2100;}
+    100% {stroke-dashoffset: 2100;}
+  }
+}
+
+.line-three {
+  stroke-dasharray: 2100;
+  stroke-dashoffset: 2100;
+  animation: dash3 6s 4s linear infinite;
+  @keyframes dash3 {
+    0% {stroke-dashoffset: 2100;}
+    33% {stroke-dashoffset: 0;}
+    34% {stroke-dashoffset: 2100;}
+    100% {stroke-dashoffset: 2100;}
+  }
+}
+
+.float {
+  animation: float_826 4s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes float_826 {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(-6px) }
+  50% { transform: translateY(0) }
+  100% { transform: translateY(0) }
+}
+
+.pulse {
+  animation: pulse_6874 4s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes pulse_6874 {
+  0% { transform: scale(1.01) }
+  25% { transform: scale(0.99) }
+  50% { transform: scale(1.01) }
+  100% { transform: scale(1.01) }
+}
 
 #services {
   .wrapper {

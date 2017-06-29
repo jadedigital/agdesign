@@ -40,7 +40,7 @@ $(window).scroll(function() {
 
 
 
-/* ---- particles.js config ---- 
+/* ---- particles.js config ---- */
 
 particlesJS("particles", {
   "particles": {
@@ -152,4 +152,4 @@ particlesJS("particles", {
   },
   "retina_detect": true
 });
-*/
+
