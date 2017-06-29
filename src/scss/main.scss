@@ -70,6 +70,42 @@ body, html {
   width: 60%;
 }
 
+.hero {
+  z-index: 904;
+  position: absolute;
+  right: 0px;
+  height: 70%;
+  margin-top: 10%;
+  
+  .wrapper {
+    position: relative;
+    height:100%
+  }
+
+  img {
+    height: 100%;
+  }
+
+  .lines {
+    position: absolute;
+    right:0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.line-one {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear;
+  
+  @keyframes dash {
+    from {stroke-dashoffset: 1000;}
+    to {stroke-dashoffset: 0;}
+  }
+}
+
+
 #services {
   .wrapper {
     padding-top: 40px;

@@ -18,26 +18,26 @@ html(lang="en").no-js
     <![endif]-->
 
     // Fixed navbar
-    .navbar(role="navigation")
-      .container
-        .navbar-header
-          button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          .small-logo-container
-            img.small-logo(src="images/ag_design.png")
-        .navbar-collapse
-          ul.nav-links
-            li.active
-              a(href="#services") Services
-            li 
-              a.linky(href="#") Portfolio
-            li 
-              a(href="#") About
-            li 
-              a(href="#") Contact
-
+    .row
+      .col-xs-12
+        .navbar(role="navigation")
+          .navbar-header
+            button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            .small-logo-container
+              img.small-logo(src="images/ag_design.png")
+          .navbar-collapse
+            ul.nav-links
+              li.active
+                a(href="#services") Services
+              li 
+                a.linky(href="#") Portfolio
+              li 
+                a(href="#") About
+              li 
+                a(href="#") Contact
     #cover
       #particles
       a.big-logo
@@ -50,6 +50,28 @@ html(lang="en").no-js
         button.btn-alpha Get Started
       svg(class="overlay" height="100%" width="40%" viewBox="0 0 100 100" preserveAspectRatio="none")
         polygon(class="overlay-polygon" points="0,0 100,0 30,100 0,100")
+      .hero
+        .wrapper
+          img(src="images/agdesign-hero.svg")
+          svg(xmlns='http://www.w3.org/2000/svg', width='5097.791', height='3412.393', viewbox='0 0 4779.1791 3199.1186').lines
+            defs
+              marker#f(orient='auto', overflow='visible')
+                path(d='M2.308 0l-3.46 2v-4l3.46 2z', fill='#f2f2f2', fill-rule='evenodd', stroke='#f2f2f2', stroke-width='.4pt')
+              marker#d(orient='auto', overflow='visible')
+                path(d='M1.96 0a2 2 0 1 1-4.001-.001A2 2 0 0 1 1.96 0z', fill='#f2f2f2', fill-rule='evenodd', stroke='#f2f2f2', stroke-width='.4pt')
+              marker#e(orient='auto', overflow='visible')
+                path(d='M1.96 0a2 2 0 1 1-4.001-.001A2 2 0 0 1 1.96 0z', fill='#f2f2f2', fill-rule='evenodd', stroke='#f2f2f2', stroke-width='.4pt')
+              marker#c(orient='auto', overflow='visible')
+                path(d='M1.96 0a2 2 0 1 1-4.001-.001A2 2 0 0 1 1.96 0z', fill='#f2f2f2', fill-rule='evenodd', stroke='#f2f2f2', stroke-width='.4pt')
+              marker#a(orient='auto', overflow='visible')
+                path(d='M1.96 0a2 2 0 1 1-4.001-.001A2 2 0 0 1 1.96 0z', fill='#f2f2f2', fill-rule='evenodd', stroke='#f2f2f2', stroke-width='.4pt')
+              marker#b(orient='auto', overflow='visible')
+                path(d='M1.96 0a2 2 0 1 1-4.001-.001A2 2 0 0 1 1.96 0z', fill='#f2f2f2', fill-rule='evenodd', stroke='#f2f2f2', stroke-width='.4pt')
+            g(fill='none', stroke='#fff', stroke-width='15', stroke-linejoin='round')
+              path.line-one(d='M9425.988 10433.799v196h1140v-520.167', marker-start='url(#a)', marker-end='url(#b)', transform='translate(-8593.436 -8503.499)')
+              path(d='M10630.898 9421.222v-307.46h1140v419.44', marker-start='url(#c)', marker-end='url(#d)', transform='translate(-8593.436 -8503.499)')
+              path(d='M12096.331 9769.282h663.842v1140h-311.961', marker-start='url(#e)', marker-end='url(#f)', transform='translate(-8593.436 -8503.499)')
+
     #services.section
       h1 Services
       .wrapper
