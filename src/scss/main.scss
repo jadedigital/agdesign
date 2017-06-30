@@ -44,16 +44,17 @@ body, html {
   z-index: 903;
   width:30%;
   padding-top:60px;
+  padding-left: 30px;
   
   img {
     width:250px;
     display: block;
-    margin: 8px auto;
+    margin: 8px 0;
   }
 
   p {
-    margin: 5px auto;
     width: 90%;
+    margin: 1em 0;
   }
 }
 
@@ -67,7 +68,7 @@ body, html {
   display: block;
   font-size: 16px;
   border-radius: 20px;
-  margin: 15px auto;
+  margin: 15px 0;
   width: 60%;
 }
 
@@ -98,24 +99,25 @@ body, html {
 .line-one {
   stroke-dasharray: 2100;
   stroke-dashoffset: 2100;
-  animation: dash 6s linear infinite;
-  
+  animation: dash 18s 3s linear infinite;
   @keyframes dash {
     0% {stroke-dashoffset: 2100;}
-    33% {stroke-dashoffset: 0;}
-    100% {stroke-dashoffset: 0;}
+    11.1% {stroke-dashoffset: 0;}
+    83.33% {stroke-dashoffset: 0;}
+    83.34% {stroke-dashoffset: 2100;}
+    100% {stroke-dashoffset: 2100;}
   }
 }
 
 .line-two {
   stroke-dasharray: 2100;
   stroke-dashoffset: 2100;
-  animation: dash2 6s 2s linear infinite;
+  animation: dash2 18s 8s linear infinite;
   @keyframes dash2 {
     0% {stroke-dashoffset: 2100;}
-    33% {stroke-dashoffset: 0;}
-    66% {stroke-dashoffset: 0;}
-    67% {stroke-dashoffset: 2100;}
+    11.1% {stroke-dashoffset: 0;}
+    55.56% {stroke-dashoffset: 0;}
+    55.57% {stroke-dashoffset: 2100;}
     100% {stroke-dashoffset: 2100;}
   }
 }
@@ -123,14 +125,66 @@ body, html {
 .line-three {
   stroke-dasharray: 2100;
   stroke-dashoffset: 2100;
-  animation: dash3 6s 4s linear infinite;
+  animation: dash3 18s 13s linear infinite;
   @keyframes dash3 {
     0% {stroke-dashoffset: 2100;}
-    33% {stroke-dashoffset: 0;}
-    34% {stroke-dashoffset: 2100;}
+    11.1% {stroke-dashoffset: 0;}
+    27.79% {stroke-dashoffset: 0;}
+    27.80% {stroke-dashoffset: 2100;}
     100% {stroke-dashoffset: 2100;}
   }
 }
+
+.redline-cog {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash4 18s 10s linear infinite;
+  transform-origin: 50% 50%;
+  @keyframes dash4 {
+    0% {stroke-dashoffset: 2100; transform:rotate(0deg) }
+    16.67% {stroke-dashoffset: 0; transform:rotate(135deg) }
+    44.46% {stroke-dashoffset: 0; transform:rotate(360deg) }
+    44.47% {stroke-dashoffset: 2100;}
+    100% {stroke-dashoffset: 2100;}
+  }
+}
+
+.redline-mug {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash5 18s linear infinite;
+  @keyframes dash5 {
+    0% {stroke-dashoffset: 2000;}
+    16.67% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: 0;}
+  }
+}
+
+.redline-bulb {
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  animation: dash6 18s 5s linear infinite;
+  @keyframes dash6 {
+    0% {stroke-dashoffset: 2500;}
+    16.67% {stroke-dashoffset: 0;}
+    72.23% {stroke-dashoffset: 0;}
+    72.24% {stroke-dashoffset: 2500;}
+    100% {stroke-dashoffset: 2500;}
+  }
+}
+
+.redline-cpu {
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  animation: dash7 18s 15s linear infinite;
+  @keyframes dash7 {
+    0% {stroke-dashoffset: 2500;}
+    16.67% {stroke-dashoffset: 0;}
+    16.68% {stroke-dashoffset: 2500;}
+    100% {stroke-dashoffset: 2500;}
+  }
+}
+
 
 .float {
   animation: float_826 4s linear infinite;
