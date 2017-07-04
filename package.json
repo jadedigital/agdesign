@@ -11,7 +11,7 @@
     "imagemin": "imagemin src/images/* -o dist/images && imagemin src/images/uploads/* -o dist/images/uploads",
     "svg": "svgo -f src/images -o dist/images",
     "icons": "svgo -f src/images/icons && mkdirp dist/images && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
-    "serve": "browser-sync start --server --startPath \"dist/index.html\" --files \"dist/css/*.css, dist/js/*.js, dist/*.html\"",
+    "serve": "browser-sync start --server 'dist' --files 'dist'",
     "data": "node generate.js",
     "pug": "pug src --out dist/",
     "build:admin": "rimraf dist/admin/* && mkdirp dist/admin && ncp src/admin/ dist/admin",
