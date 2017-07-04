@@ -24,10 +24,10 @@ fs.readdir( mdFolder, function( err, mdFiles ) {
         var content = fm(data)
         //var attr = content.attributes
         if (stringContentOld == '') {
-          stringContent = '"' + postKey + '"' + ': ' + JSON.stringify(content.attributes).replace(/\r\n/g, '')
+          stringContent = '"' + postKey + '": ' + JSON.stringify(content.attributes).replace(/\r\n/g, '')
         }
         else {
-          stringContent = stringContentOld + ', ' + postKey + ' = ' + JSON.stringify(content.attributes).replace(/\r\n/g, '')
+          stringContent = stringContentOld + ', "' + postKey + '": ' + JSON.stringify(content.attributes).replace(/\r\n/g, '')
         }
         stringContentOld = stringContent
         if (index === array.length - 1){ 
