@@ -2,7 +2,6 @@ backend:
   name: github
   repo: jadedigital/agdesign # Path to your Github repository
   branch: master # Branch to update
-publish_mode: editorial_workflow
 media_folder: "src/images/uploads" # Media files will be stored in the repo under src/images/uploads
 public_folder: "images/uploads" # The src attribute for uploaded media will begin with images/uploads
 collections:
