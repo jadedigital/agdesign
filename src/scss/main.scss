@@ -316,7 +316,17 @@ body, html {
   background-color: $moonlight;
   color: #fff;
   img {
+    height: 100%;
+    width: 100%;
+    transition: all .5s ease-in-out;
+    transform-origin: 50% 50%;
+  }
+  img:hover {
+    transform: scale(1.2);
+  }
+  .wrapper {
     height: 300px;
+    overflow: hidden;
   }
 }
 

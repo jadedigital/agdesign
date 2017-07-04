@@ -128,7 +128,8 @@ html.no-js(lang='en')
       each val, index in portfolio
         .col-xs-4
           h1= val.title
-          img(src= val.thumbnail)
+          .wrapper
+            img(src= val.thumbnail)
     #about.row.center-xs.section
       .col-xs-6
         h1 About

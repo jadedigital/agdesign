@@ -19,7 +19,7 @@
     "build:js": "npm run lint && npm run uglify",
     "build:images": "npm run imagemin && npm run svg && npm run icons",
     "build:data": "npm run data",
-    "build:html": "npm run pug && rimraf dist/data.html",
+    "build:html": "npm run pug",
     "build:fonts": "mkdirp dist/fonts && cp src/fonts/* dist/fonts/",
     "build:all": "npm run build:css && npm run build:js && npm run build:images && npm run build:data && npm run build:html && npm run build:fonts && npm run build:admin",
     "watch:css": "onchange \"src/scss/*.scss\" -- npm run build:css",
