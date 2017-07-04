@@ -6,6 +6,7 @@ $ruby: #E03D4D;
 $silver: #f6fdff;
 $smoke: #585858;
 $moonlight: #2b373e;
+$onyx: #1f282e;
 $azure: #1E7DAD;
 
 body, html {
@@ -310,15 +311,39 @@ body, html {
   }
 }
 
-#about {
-  padding: 120px 0;
+#portfolio {
+  padding: 120px 0 0 0;
   background-color: $moonlight;
   color: #fff;
+  img {
+    height: 300px;
+  }
+}
+
+#about {
+  padding: 120px 0;
+  background-color: $silver;
 }
 
 #contact {
   padding: 120px 0;
-  background-color: $silver;
+  background-color: $moonlight;
+  color: $silver;
+  input, textarea {
+    width:100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    color: $silver;
+    background-color: $onyx;
+    border: 1px solid #ccc;
+    input::placeholder {
+      color: $ruby;
+    }
+  }
+  .btn {
+    cursor: pointer;
+  }
 }
 
 /* *********************************
