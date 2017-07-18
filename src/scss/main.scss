@@ -8,6 +8,7 @@ $smoke: #585858;
 $moonlight: #2b373e;
 $onyx: #1f282e;
 $azure: #1E7DAD;
+$light-azure: #DEF3FF;
 
 body, html {
   height: 100%;
@@ -27,7 +28,7 @@ body, html {
   width: 100%;
   z-index: 901;
   position: absolute;
-  background-color: $moonlight;
+  background: linear-gradient(100deg, $silver 0%, $silver 33%, $moonlight 33.1%, $moonlight 100%);
 }
 
 .overlay {
@@ -37,6 +38,37 @@ body, html {
 
 .overlay-polygon {
   fill: $silver;
+}
+
+.rect { 
+  height: 30px;
+  background: linear-gradient(270deg, rgba(40, 137, 192, 0.25) 0%, rgba(40, 137, 192, 0) 74.17%);
+  border-radius: 25px;
+
+  &:first-child {
+      width: 75%;
+    }
+  &:nth-child(2) {
+      width: 100%;
+    }
+  &:nth-child(3) {
+      width: 50%;
+    }
+  &:nth-child(7) {
+      width: 50%;
+    }
+  &:nth-child(8) {
+      width: 75%;
+      height: 40px;
+      padding: 10px 20px 10px 0;
+      border-radius: 30px;
+    }
+  &:nth-child(9) {
+      width: 55%;
+    }
+  &:nth-child(10) {
+      width: 35%;
+    }
 }
 
 .big-logo {  
@@ -56,7 +88,7 @@ body, html {
   p {
     width: 90%;
     margin: 1em 0;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -65,14 +97,19 @@ body, html {
   background-color: $ruby;
   border: none;
   color: white;
-  padding: 10px 32px;
+  padding: 8px 32px;
   text-align: center;
   text-decoration: none;
   display: block;
   font-size: 16px;
   border-radius: 20px;
-  margin: 15px 0;
-  width: 60%;
+  margin: 0;
+  width: 100px;
+  float: right;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  &:hover {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .hero {
@@ -89,6 +126,7 @@ body, html {
 
   img {
     height: 100%;
+    opacity: 0.2;
   }
 
   .lines {
@@ -270,33 +308,19 @@ body, html {
 }
 
 #services {
+  padding: 40px 20px;
+  h1 {
+    margin-bottom: 30px;
+  }
   .wrapper {
-    padding-top: 40px;
-    width: 90%;
-    margin: 0 auto;
+    height: 460px;
+    padding: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    transition: all .2s ease-in-out;
   }
-
-}
-
-.one-service {
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  line-height: 1.5;
-  @include not-phone {
-    width: 33%;
-  }
-}
-
-.service-circle {
-  border-radius: 999px;
-  margin: 0 auto;
-  height: 80px;
-  width: 80px;
-  background-color: $ruby;
-
-  i {
-    padding-top: 24px;
+  .wrapper:hover {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+    transform: translateY(-10px);
   }
 }
 
@@ -308,6 +332,9 @@ body, html {
     font-weight: 300;
     font-size: 30px;
     text-align: center;
+  }
+  p {
+    cursor: default;
   }
 }
 
