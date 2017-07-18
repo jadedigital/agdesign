@@ -4,10 +4,8 @@ var path = require( 'path' )
 
 var mdFolder = '_posts/portfolio/'
 var layout = 'portfolio'
-var dataFile = 'src/data.pug'
-
-var stringContent = ''
-var stringContentOld = ''
+var dataFile = 'src/js/data.js'
+var stringContent = new Array()
 
 fs.readdir( mdFolder, function( err, mdFiles ) {
     if( err ) {
@@ -22,30 +20,15 @@ fs.readdir( mdFolder, function( err, mdFiles ) {
         if (err) throw err
 
         var content = fm(data)
-        //var attr = content.attributes
-        if (stringContentOld == '') {
-          stringContent = '"' + postKey + '": ' + JSON.stringify(content.attributes).replace(/\r\n/g, '')
-        }
-        else {
-          stringContent = stringContentOld + ', "' + postKey + '": ' + JSON.stringify(content.attributes).replace(/\r\n/g, '')
-        }
-        stringContentOld = stringContent
+        content.attributes["body"]=content.body
+        stringContent.push(JSON.stringify(content.attributes))
+
         if (index === array.length - 1){ 
-          var newData = '- var ' + layout + ' = {' + stringContent + '} \r\n'
+          var newData = 'var data = {' + layout + ': [' + stringContent + ']} \r\n'
           fs.writeFile(dataFile, newData, 'utf8', function (err) {
             if (err) return console.log(err)
           })
         }
-        //for (var key in attr) {
-          //if (attr.hasOwnProperty(key)) {
-            
-            //var pugVar = '#{' + attr['key'] + '.' + key + '}'
-            //var rePugVar = new RegExp(pugVar,"g");
-            //html = html.replace(rePugVar, attr[key])
-            
-            
-          //}
-        //}
       })
     })
 })

@@ -118,14 +118,23 @@ html.no-js(lang='en')
           h4 WEB HOSTING AND MANAGEMENT
           p
             | We host your website on powerful servers, designed and optimized by us to provide best in class WordPress hosting. We manage your security, backups, and software updates to ensure top notch reliability and performance.
+      .section-break
+        .section-rect
+        .section-rect
+        .section-rect
     #portfolio.row.center-xs.section
       .col-xs-12
-        h1 Portfolio
+        h1 Latest Work
       each val, index in portfolio
-        .col-xs-4
+        .col-xs-6
           h1= val.title
+        .col-xs-6
           .wrapper
             img(src= val.thumbnail)
+        .section-break(class=(index % 2 == 0) ? 'odd' : 'even')
+          .section-rect
+          .section-rect
+          .section-rect
     #about.row.center-xs.section
       .col-xs-6
         h1 About
@@ -137,7 +146,6 @@ html.no-js(lang='en')
       .col-xs-6
         h1 Ready to get started?
         p Let’s talk about your project. Contact us today and we’ll get the ball rolling!
-        btn Get in Touch
         form(action='https://formspree.io/agreene@jadedigital.ca', method='POST')
           .row.end-xs
             .col-xs-12
@@ -148,8 +156,11 @@ html.no-js(lang='en')
               input(type='text', name='budget', placeholder='What is your budget?')
             .col-xs-12
               textarea(rows='10', name='message', placeholder='What can I help you with?', required='')
-            .col-xs-2
-              input.btn(type='submit', value='Send')
+            .col-xs-6
+              .btn-wrap
+                input.btn(type='submit', value='Send')
+    #footer.row.end-xs.section
+      p Copyright © 2017 - Aaron Greene
     script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
     script(src='js/app.js')
     script(src='https://use.fontawesome.com/ef4ebaee1a.js')
