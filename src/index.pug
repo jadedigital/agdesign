@@ -44,12 +44,19 @@ html.no-js(lang='en')
     #cover
       #particles
       .big-logo
+        .rect
+        .rect
+        .rect
         img(src='images/ag_design.png')
         p
           | Web design and Development, Logo Design and Branding, Domain Hosting and Management
         p Making design easy & enjoyable so you can focus on building your business.
-        a.btn-alpha(href='#contact') Contact Me
-      svg.overlay(height='100%', width='40%', viewbox='0 0 100 100', preserveaspectratio='none')
+        .rect
+        .rect
+          a.btn-alpha(href='#contact') Contact Me
+        .rect
+        .rect
+      //svg.overlay(height='100%', width='40%', viewbox='0 0 100 100', preserveaspectratio='none')
         polygon.overlay-polygon(points='0,0 100,0 30,100 0,100')
       .hero
         .wrapper
@@ -87,41 +94,30 @@ html.no-js(lang='en')
             path(d='M704.563 1579.114v204.793h211.262v-204.793z', fill='none', stroke='#f2f2f2', stroke-width='10')
             path.redline-bulb(d='M2090.782 1192.207l46.13-82.672-64.102 26.36 76.682-178.526-119.816 132.995-16.175-77.88-31.751 58.11-57.512-126.405L1923.04 1067l-44.93-24.562 3.594 38.94-95.853-91.06 26.959 82.074-39.54-13.779 44.873 66.077-145.299-68.625 128.778 126.236-75.826-7.201 72.437 49.563-171.563-19.487 193.591 73.285-79.639 28.382 100.944 6.977', fill='none', stroke='#e03d4d', stroke-width='10', stroke-linecap='round')
             path.redline-cpu(d='M3178.361 2272.255v30.5h396.501v-30.5zM3178.361 2320.97v134.286h119.035V2320.97zM3317.094 2320.97v134.286h119.035V2320.97zM3455.827 2320.97v134.286h119.035V2320.97z', fill='none', stroke='#e03d4d', stroke-width='10', stroke-linecap='round', stroke-linejoin='round')
-    #services.section
-      h1 Services
-      .wrapper
-        .one-service
-          .service-circle
-            i.fa.fa-desktop.fa-2x.fa-inverse(aria-hidden='true')
-          h4 Cross-platform
+    #services.row.section
+      .col-xs-12
+        h1 Supercharge Your Website
+      .col-xs-4
+        .wrapper
+          .row.center-xs
+            img(src='images/web-design.svg')
+          h4 WEB DESIGN
           p
-            | Sectional works across operating systems. You can use it on OS X, Windows, or Linux.
-        .one-service
-          .service-circle
-            i.fa.fa-search.fa-2x.fa-inverse(aria-hidden='true')
-          h4 Searchable
-          p Search for the section you're looking for. Sectional filters as you type
-        .one-service
-          .service-circle
-            i.fa.fa-sort-amount-asc.fa-2x.fa-inverse(aria-hidden='true')
-          h4 Sortable
-          p Sort sections by weight, depth, width, or any other section property.
-      .wrapper
-        .one-service
-          .service-circle
-            i.fa.fa-share.fa-2x.fa-inverse(aria-hidden='true')
-          h4 Export
-          p Export your desired section properties for printing or importing into STAAD.pro 
-        .one-service
-          .service-circle
-            i.fa.fa-wrench.fa-2x.fa-inverse(aria-hidden='true')
-          h4 Custom Sections
-          p Design your own custom section. Sectional will calculate the properties for you.
-        .one-service
-          .service-circle
-            i.fa.fa-tags.fa-2x.fa-inverse(aria-hidden='true')
-          h4 Tags
-          p Tag sections based on the project or structure you're working on.
+            | I build custom designs that suit your unique business style, culture, and message. The end result is more traffic, more leads, and more website conversions, and a final website product that both you and I can be proud of.
+      .col-xs-4  
+        .wrapper
+          .row.center-xs
+            img(src='images/web-design.svg')
+          h4 LOGO DESIGN
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      .col-xs-4
+        .wrapper
+          .row.center-xs
+            img(src='images/web-design.svg')
+          h4 WEB HOSTING AND MANAGEMENT
+          p
+            | We host your website on powerful servers, designed and optimized by us to provide best in class WordPress hosting. We manage your security, backups, and software updates to ensure top notch reliability and performance.
     #portfolio.row.center-xs.section
       .col-xs-12
         h1 Portfolio
@@ -142,12 +138,12 @@ html.no-js(lang='en')
         h1 Ready to get started?
         p Let’s talk about your project. Contact us today and we’ll get the ball rolling!
         btn Get in Touch
-        form(method='POST' name="contact" netlify)
+        form(action='https://formspree.io/agreene@jadedigital.ca', method='POST')
           .row.end-xs
             .col-xs-12
               input(type='text', name='name', placeholder='Your name', required='')
             .col-xs-12
-              input(type='email', name='email', placeholder='Your email', required='')
+              input(type='email', name='_replyto', placeholder='Your email', required='')
             .col-xs-12
               input(type='text', name='budget', placeholder='What is your budget?')
             .col-xs-12
