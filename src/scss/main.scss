@@ -33,7 +33,7 @@ p {
   width: 100%;
   z-index: 901;
   position: absolute;
-  background: linear-gradient(100deg, $silver 0%, $silver 33%, $moonlight 33.1%, $moonlight 100%);
+  background: linear-gradient(200deg, #1f77a9 2%, #48587b 40%, #2b373e 78.5%, #f6fdff 78.6%, #f6fdff 93.15%);
 }
 
 .overlay {
@@ -47,33 +47,11 @@ p {
 
 .rect { 
   height: 30px;
-  background: linear-gradient(270deg, rgba(40, 137, 192, 0.25) 0%, rgba(40, 137, 192, 0) 74.17%);
+  background: linear-gradient(270deg, $silver 0%, rgba(40, 137, 192, 0) 65%);
   border-radius: 25px;
-
-  &:first-child {
-      width: 75%;
-    }
-  &:nth-child(2) {
-      width: 100%;
-    }
-  &:nth-child(3) {
-      width: 50%;
-    }
-  &:nth-child(7) {
-      width: 50%;
-    }
-  &:nth-child(8) {
-      width: 75%;
-      height: 40px;
-      padding: 10px 20px 10px 0;
-      border-radius: 30px;
-    }
-  &:nth-child(9) {
-      width: 55%;
-    }
-  &:nth-child(10) {
-      width: 35%;
-    }
+  height: 40px;
+  padding: 10px 20px 10px 0;
+  border-radius: 30px;
 }
 
 .section-break {
@@ -104,25 +82,26 @@ p {
   /*background-image: url("../images/ag_design.png");*/
   position: absolute;
   z-index: 903;
-  width:30%;
-  padding-top:60px;
-  padding-left: 30px;
+  margin-top:200px;
   
   img {
-    width:250px;
+    width:350px;
     display: block;
     margin: 8px 0;
   }
 
   p {
-    width: 90%;
-    margin: 1em 0;
     font-size: 18px;
+    color: $silver;
+  }
+  .wrapper {
+    padding: 0 150px;
   }
 }
 
 .btn-alpha {
   cursor: pointer;
+  line-height: 1.5;
   background-color: $ruby;
   border: none;
   color: white;
@@ -133,7 +112,6 @@ p {
   font-size: 16px;
   border-radius: 20px;
   margin: 0;
-  width: 100px;
   float: right;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   &:hover {
@@ -541,7 +519,7 @@ $small-logo-padding: 2px; // of bottom padding to look nice
   a {
     text-decoration: none;
     padding: 10px 30px;
-    color: $ruby;
+    color: $silver;
     font-size: 24px;
     font-weight: normal;
   }

@@ -29,10 +29,10 @@ $(window).scroll(function() {
   var shadowOpacity = navOpacity * 0.4;
   if ( ySmall > 1) {
     $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
-    $('.nav-links a').css({"color": "#fff"});
+    //$('.nav-links a').css({"color": "#fff"});
   } else {
     $('.navbar').css({"box-shadow": "none"});
-    $('.nav-links a').css({"color": "#E03D4D"});
+    //$('.nav-links a').css({"color": "#E03D4D"});
   }
 });
 
