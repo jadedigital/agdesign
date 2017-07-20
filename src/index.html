@@ -114,21 +114,21 @@
 		<div class="col-xs-12">
 			<h1>Supercharge Your Website</h1>
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" data-aos="fade-up">
 			<div class="wrapper">
 				<div class="row center-xs"><img src="images/web-design.svg"></div>
 				<h4>WEB DESIGN</h4>
 				<p>I build custom designs that suit your unique business style, culture, and message. The end result is more traffic, more leads, and more website conversions, and a final website product that both you and I can be proud of.</p>
 			</div>
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" data-aos="fade-up">
 			<div class="wrapper">
 				<div class="row center-xs"><img src="images/web-design.svg"></div>
 				<h4>LOGO DESIGN</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 			</div>
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" data-aos="fade-up">
 			<div class="wrapper">
 				<div class="row center-xs"><img src="images/web-design.svg"></div>
 				<h4>WEB HOSTING AND MANAGEMENT</h4>
@@ -148,16 +148,29 @@
       <div v-for="(item, index) in portfolio">
         <div class="row">
           <div class="col-xs-6">
-              <div class="wrapper"><img :src="item.thumbnail"></div>
+              <div v-if="(index + 1) % 2 === 0" class="wrapper" data-aos="fade-left">
+								<img :src="item.thumbnail">
+							</div>
+							<div v-if="(index + 1) % 2 !== 0" class="wrapper" data-aos="fade-right">
+								<img :src="item.thumbnail">
+							</div>
           </div>
           <div class="col-xs-6" :class="{'first-xs': (index + 1) % 2 === 0, '': (index + 1) % 2 !== 0 }">
-              <h1>{{item.title}}</h1>
-              <p>{{item.body}}</p>
+						<div v-if="(index + 1) % 2 === 0">
+							<h1 data-aos="fade-right">{{item.title}}</h1>
+							<p data-aos="fade-right">{{item.body}}</p>
+						</div>
+						<div v-if="(index + 1) % 2 !== 0">
+							<h1 data-aos="fade-left">{{item.title}}</h1>
+							<p data-aos="fade-left">{{item.body}}</p>
+						</div>
           </div>
           <div class="section-break" :class="{'even': (index + 1) % 2 === 0, 'odd': (index + 1) % 2 !== 0 }">
+						<div>	
+							<div class="section-rect"></div>
               <div class="section-rect"></div>
-              <div class="section-rect"></div>
-              <div class="section-rect"></div>
+							<div class="section-rect"></div>
+						</div>
           </div>
         </div>
       </div>

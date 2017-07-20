@@ -1,5 +1,14 @@
 var navbarHeight = $('.navbar').height(); 
 
+$(function() {
+  AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+});
+
 $(window).scroll(function() {
   var navbarColor = "224,61,77";//color attr for rgba
   var navbarLinkColor = "224,61,77";//color attr for rgba
