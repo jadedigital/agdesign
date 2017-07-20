@@ -1,6 +1,7 @@
 @import 'mixins';
 @import 'font-awesome';
 @import 'aos';
+@import 'bootstrap';
 
 $jade: #3DE0BF;
 $ruby: #E03D4D;
@@ -17,20 +18,30 @@ body, html {
   font-family: 'Fira Sans', sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 p {
   font-weight: 300;
   color: $moonlight;
 }
 
+.col-center{
+    float: none;
+    margin: 0 auto;
+}
+
+.col-end{
+    float: right;
+}
+
 #cover { 
-  height: 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100vh; 
 }
 
 #particles { 
-  height: 100%; 
+  height: 100vh; 
   width: 100%;
   z-index: 901;
   position: absolute;
@@ -49,15 +60,16 @@ p {
 .rect { 
   height: 30px;
   background: linear-gradient(270deg, $silver 0%, rgba(40, 137, 192, 0) 65%);
-  border-radius: 25px;
   height: 40px;
   padding: 10px 20px 10px 0;
   border-radius: 30px;
+  box-sizing: content-box;
 }
 
 .section-break {
   width: 100%;
   padding-top: 160px;
+  display: inline-block;
 }
 
 .section-rect {
@@ -65,9 +77,9 @@ p {
   float:right;
   height: 30px;
 
-  background: linear-gradient(270deg, rgba(40, 137, 192, 0.25) 0%, rgba(40, 137, 192, 0) 74.17%);
+  background: linear-gradient(90deg, rgba(40, 137, 192, 0.25) 0%, rgba(40, 137, 192, 0) 74.17%);
   border-radius: 15px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+
   &:nth-child(1) {
     width: 60%;
   }
@@ -80,8 +92,6 @@ p {
 }
 
 .big-logo {  
-  /*background-image: url("../images/ag_design.png");*/
-  position: absolute;
   z-index: 903;
   margin-top:200px;
   
@@ -316,7 +326,8 @@ p {
 }
 
 #services {
-  padding: 120px 20px 40px;
+  padding: 120px 0 40px;
+  display: inline-block;
   h1 {
     margin-bottom: 30px;
   }
@@ -375,7 +386,7 @@ p {
     transform: scale(1.2);
   }
   .wrapper {
-    height: 300px;
+    height: 380px;
     position: relative;
     z-index: 5;
     padding: 40px;
@@ -401,7 +412,7 @@ p {
   .odd {
     .section-rect {
       float: left;
-      transform: none;
+      background: linear-gradient(270deg, rgba(40, 137, 192, 0.25) 0%, rgba(40, 137, 192, 0) 74.17%);
     }
   }
 }
@@ -447,9 +458,11 @@ p {
   color: $silver;
   h1 {
     padding-bottom: 50px;
+    color: $silver;
   }
   p {
     color: $silver;
+    text-align: center;
   }
   input, textarea {
     font: 14px 'Fira Sans';
@@ -469,6 +482,7 @@ p {
     width: 100%;
     padding: 7.5px 20px 7.5px 0;
     border-radius: 30px;    
+    display: inline-block;
     background: linear-gradient(270deg, #F6FDFF 0%, rgba(40, 137, 192, 0) 92.92%);
   }
   .btn {
@@ -503,11 +517,10 @@ $small-logo-padding: 2px; // of bottom padding to look nice
 
 .navbar {
   min-height: 50px;
+  width:100%;
   background: rgba(62,195,246,0);
   border-bottom: none;
   position: fixed;
-  right: 0;
-  left: 0;
   z-index: 1030;
   overflow:hidden;
 }
