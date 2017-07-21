@@ -45,7 +45,12 @@ $(window).scroll(function() {
   }
 });
 
-
+$(window).scroll(function() {
+  var scrollBottom = $(window).scrollTop() + $(window).height()
+  if ( scrollBottom > $('#services').position().top ) {
+    $('.draw').addClass('animate')
+  }
+})
 
 
 
