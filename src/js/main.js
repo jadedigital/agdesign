@@ -47,8 +47,12 @@ $(window).scroll(function() {
 
 $(window).scroll(function() {
   var scrollBottom = $(window).scrollTop() + $(window).height()
-  if ( scrollBottom > $('#services').position().top ) {
+  if ( scrollBottom > $('#draw-trigger').position().top ) {
     $('.draw').addClass('animate')
+  }
+  if ( scrollBottom < $('#draw-trigger').position().top ) {
+    $('.draw').removeClass('animate')
+    console.log('above')
   }
 })
 
