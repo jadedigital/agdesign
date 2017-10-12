@@ -108,6 +108,15 @@ p {
   .wrapper {
     padding: 0 150px;
   }
+  @include phone {
+    margin-top:80px;
+    .wrapper {
+      padding: 0 20px;
+    }
+    img {
+      width:90%;
+    }
+  }
 }
 
 .btn-alpha {
@@ -371,6 +380,11 @@ p {
     width:100%;
     height:100%;
   }
+  @include phone {
+    .wrapper {
+      margin-top: 10px;
+    }
+  }
 }
 
 .section {
@@ -401,7 +415,7 @@ p {
     color: #000;
   }
   p {
-    padding: 0 100px;
+    padding: 0 40px;
     font-weight: normal;
     text-align: center;
   }
@@ -446,6 +460,21 @@ p {
     .section-rect {
       float: left;
       background: linear-gradient(270deg, rgba(40, 137, 192, 0.25) 0%, rgba(40, 137, 192, 0) 74.17%);
+    }
+  }
+  @include phone {
+    p {
+      padding: 0 10px;
+    }
+    img {
+      height: auto;
+      width: 100%;
+    }
+    h1 {
+      padding-bottom: 20px;
+    }
+    .wrapper {
+      height: auto;
     }
   }
 }
@@ -528,6 +557,11 @@ p {
       box-shadow: 0 4px 12px rgba(5,15,44,0.5);
     }
   }
+  @include phone {
+    .btn {
+      width:60%;
+    }
+  }
 }
 
 #footer {
@@ -535,6 +569,9 @@ p {
   padding: 15px 100px;
   p {
     color: $silver;
+  }
+  @include phone {
+    padding:15px 10px;
   }
 }
 
@@ -556,6 +593,9 @@ $small-logo-padding: 2px; // of bottom padding to look nice
   position: fixed;
   z-index: 1030;
   overflow:hidden;
+  @include phone {
+    display:none;
+  }
 }
 
 .navbar-collapse {
