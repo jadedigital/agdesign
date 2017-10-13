@@ -45,7 +45,7 @@ p {
   width: 100%;
   z-index: 901;
   position: absolute;
-  background: linear-gradient(200deg, #1f77a9 2%, #48587b 40%, #2b373e 78.5%, #f6fdff 78.6%, #f6fdff 93.15%);
+  background: linear-gradient(210deg, #1f77a9 2%, #48587b 40%, #2b373e 81%, #f6fdff 81%, #f6fdff 93.15%);
 }
 
 .overlay {
@@ -144,7 +144,16 @@ p {
   position: absolute;
   bottom: 0;
   svg {
-    height:100px;
+    height: 220px;
+    width: auto;
+    margin: 20px;
+    opacity: 0.25;
+  }
+  @include phone {
+    svg {
+      height: 100px;
+      margin: 10px;
+    }
   }
 }
 
@@ -155,6 +164,54 @@ p {
     animation: drawlogo 2.5s 1s linear forwards;
     @keyframes drawlogo {
       0% {stroke-dashoffset: 260;}
+      100% {stroke-dashoffset: 0;}
+    }
+  }
+}
+
+.notebook {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  &.animate {
+    animation: draw2 5s linear infinite;
+    @keyframes draw2 {
+      0% {stroke-dashoffset: 100;}
+      100% {stroke-dashoffset: 0;}
+    }
+  }
+}
+
+.tablet {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  &.animate {
+    animation: draw3 5s linear infinite;
+    @keyframes draw3 {
+      0% {stroke-dashoffset: 160;}
+      100% {stroke-dashoffset: 0;}
+    }
+  }
+}
+
+.coffee {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  &.animate {
+    animation: draw4 5s linear infinite;
+    @keyframes draw4 {
+      0% {stroke-dashoffset: 200;}
+      100% {stroke-dashoffset: 0;}
+    }
+  }
+}
+
+.computer-outline {
+  stroke-dasharray: 190;
+  stroke-dashoffset: 190;
+  &.animate {
+    animation: draw5 3.5s linear infinite;
+    @keyframes draw5 {
+      0% {stroke-dashoffset: 380;}
       100% {stroke-dashoffset: 0;}
     }
   }
