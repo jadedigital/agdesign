@@ -45,7 +45,7 @@ p {
   width: 100%;
   z-index: 901;
   position: absolute;
-  background: linear-gradient(210deg, #1f77a9 2%, #48587b 40%, #2b373e 81%, #f6fdff 81%, #f6fdff 93.15%);
+  background: linear-gradient(210deg, #1f77a9 2%, #48587b 40%, #2b373e 81%);
 }
 
 .overlay {
@@ -144,14 +144,14 @@ p {
   position: absolute;
   bottom: 0;
   svg {
-    height: 220px;
+    height: 350px;
     width: auto;
-    margin: 20px;
+    margin: 30px;
     opacity: 0.25;
   }
   @include phone {
     svg {
-      height: 100px;
+      height: 150px;
       margin: 10px;
     }
   }
@@ -646,7 +646,7 @@ $small-logo-padding: 2px; // of bottom padding to look nice
   min-height: 50px;
   width:100%;
   background: rgba(62,195,246,0);
-  border-bottom: none;
+  border-bottom: 1px solid rgba(224, 61, 77, 0.4);
   position: fixed;
   z-index: 1030;
   overflow:hidden;
