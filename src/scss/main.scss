@@ -147,7 +147,7 @@ p {
     height: 350px;
     width: auto;
     margin: 30px;
-    opacity: 0.25;
+    opacity: 0.4;
   }
   @include phone {
     svg {
@@ -647,6 +647,7 @@ $small-logo-padding: 2px; // of bottom padding to look nice
   width:100%;
   background: rgba(62,195,246,0);
   border-bottom: 1px solid rgba(224, 61, 77, 0.4);
+  border-bottom-width: 2px;
   position: fixed;
   z-index: 1030;
   overflow:hidden;
@@ -677,7 +678,7 @@ $small-logo-padding: 2px; // of bottom padding to look nice
     padding: 10px 30px;
     color: $silver;
     font-size: 24px;
-    font-weight: normal;
+    font-weight: lighter;
   }
 }
 .navbar-toggle {
