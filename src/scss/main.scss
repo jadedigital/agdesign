@@ -45,7 +45,7 @@ p {
   width: 100%;
   z-index: 901;
   position: absolute;
-  background: linear-gradient(210deg, #1f77a9 2%, #48587b 40%, #2b373e 81%);
+  background: linear-gradient(210deg, #1f77a9 2%, #5877bb 40%, #2b373e 81%);
 }
 
 .overlay {
@@ -96,14 +96,23 @@ p {
   margin-top:200px;
   
   img {
-    width:350px;
+    width:120px;
     display: block;
-    margin: 8px 0;
+    margin: auto;
   }
 
   p {
     font-size: 18px;
     color: $silver;
+    text-align: center;
+    &:first-child {
+      font-size: 24px;
+      border-bottom: 1px solid rgb(236, 245, 251);
+      padding-bottom: 5px;
+    }
+    &:nth-child(2) {
+      padding-bottom: 50px;
+    }
   }
   .wrapper {
     padding: 0 150px;
@@ -114,7 +123,7 @@ p {
       padding: 0 20px;
     }
     img {
-      width:90%;
+      width:30%;
     }
   }
 }
@@ -147,7 +156,7 @@ p {
     height: 350px;
     width: auto;
     margin: 30px;
-    opacity: 0.4;
+    opacity: 0.7;
   }
   @include phone {
     svg {
@@ -646,7 +655,7 @@ $small-logo-padding: 2px; // of bottom padding to look nice
   min-height: 50px;
   width:100%;
   background: rgba(62,195,246,0);
-  border-bottom: 1px solid rgba(224, 61, 77, 0.4);
+  border-bottom: 1px solid rgb(224, 61, 77);
   border-bottom-width: 2px;
   position: fixed;
   z-index: 1030;
@@ -677,7 +686,7 @@ $small-logo-padding: 2px; // of bottom padding to look nice
     text-decoration: none;
     padding: 10px 30px;
     color: $silver;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: lighter;
   }
 }

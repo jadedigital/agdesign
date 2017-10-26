@@ -88,7 +88,7 @@ particlesJS("particles", {
       }
     },
     "opacity": {
-      "value": 1,
+      "value": 0.06,
       "random": true,
       "anim": {
         "enable": true,
@@ -116,7 +116,7 @@ particlesJS("particles", {
     },
     "move": {
       "enable": true,
-      "speed": 1,
+      "speed": 0.1,
       "direction": "none",
       "random": true,
       "straight": false,
@@ -133,11 +133,11 @@ particlesJS("particles", {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "grab"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "repulse"
       },
       "resize": true
