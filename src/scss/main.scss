@@ -106,11 +106,22 @@ p {
     color: $silver;
     text-align: center;
     &:first-child {
-      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: 40px;
+      font-weight: bold;
+      color: $seafoam;
       border-bottom: 1px solid rgb(236, 245, 251);
       padding-bottom: 5px;
+      margin-bottom: 24px;
     }
     &:nth-child(2) {
+      font-size: 24px;
+      text-transform: capitalize;
+      font-weight: 400;
+      color: $seafoam;
+    }
+    &:nth-child(3) {
       padding-bottom: 50px;
     }
   }
@@ -124,6 +135,17 @@ p {
     }
     img {
       width:30%;
+    }
+    p {
+      &:first-child {
+        font-size: 30px;
+      }
+      &:nth-child(2) {
+        font-size: 20px;
+      }
+      &:nth-child(3) {
+        font-size: 18px;
+      }
     }
   }
 }
