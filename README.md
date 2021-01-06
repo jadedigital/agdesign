@@ -1,4 +1,6 @@
-# jade-digital-boilerplate
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d7e7cea-4aa7-4aea-847e-6afaaa87d953/deploy-status)](https://app.netlify.com/sites/agdesign/deploys)
+
+# Jade Digital Static Site Generator using npm scripts
 
 A skeleton and collection of packages for building websites.
 
