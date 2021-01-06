@@ -1,0 +1,8 @@
+{
+  "layout": "portfolio",
+  "date": "June 21, 2017 12:15 PM",
+  "key": "sectional",
+  "title": "Sectional",
+  "thumbnail": "images/uploads/sectional.PNG",
+  "body": "[Sectional](https://sectional.github.io/) is a website that was developed as a brochure website for a desktop app targeted at structural engineers. The website is a static site hosted for free using Netlify. \n\nI also developed the app itself, which is an Electron app written as a vue single page app. Featured technologies include Vuejs, vuex, webpack, babel, and firebase."
+}
