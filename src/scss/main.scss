@@ -38,6 +38,10 @@ p {
 
 #cover { 
   height: 100vh; 
+  background-image: url(/images/hero-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #particles { 
@@ -45,7 +49,6 @@ p {
   width: 100%;
   z-index: 901;
   position: absolute;
-  background: linear-gradient(210deg, #1f77a9 2%, #5877bb 40%, #2b373e 81%);
 }
 
 .overlay {
@@ -589,6 +592,7 @@ p {
   }
   p {
     font-weight: normal;
+    text-align: justify;
   }
   &:before {
     content: '';
@@ -669,12 +673,12 @@ p {
 /* *********************************
            Variables
   ********************************** */
-$navbar-height: 50px;
+$navbar-height: 60px;
 $big-logo-padding: 15px; // adjust these 2 values
 $small-logo-padding: 2px; // of bottom padding to look nice
 
 .navbar {
-  min-height: 50px;
+  min-height: $navbar-height;
   width:100%;
   background: rgba(62,195,246,0);
   border-bottom: 1px solid rgb(224, 61, 77);
@@ -697,7 +701,7 @@ $small-logo-padding: 2px; // of bottom padding to look nice
   padding: 0;
   float:right;
   margin-right: 100px;
-  padding-top: 10px;
+  padding-top: 15px;
   li {
     display: inline-block;
     height: 33px;
@@ -709,7 +713,8 @@ $small-logo-padding: 2px; // of bottom padding to look nice
     padding: 10px 30px;
     color: $silver;
     font-size: 20px;
-    font-weight: lighter;
+    font-weight: normal;
+    text-transform: uppercase;
   }
 }
 .navbar-toggle {
@@ -730,6 +735,6 @@ $small-logo-padding: 2px; // of bottom padding to look nice
 }
 
 .small-logo {
-  height:($navbar-height - 10px);
-  margin: 5px 10px;
+  height:($navbar-height - 20px);
+  margin: 10px 10px;
 }
