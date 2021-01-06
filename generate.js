@@ -1,9 +1,8 @@
-var fm = require('front-matter')
 var fs = require('fs')
 var path = require( 'path' )
 
 var mdFolder = '_posts/portfolio/'
-var layout = 'portfolio'
+var layout = '"portfolio"'
 var dataFile = 'src/js/data.js'
 var stringContent = new Array()
 
@@ -13,18 +12,26 @@ fs.readdir( mdFolder, function( err, mdFiles ) {
         process.exit( 1 )
     }
 
+    var itemsProcessed = 0
+
     mdFiles.forEach( function( file, index, array ) {
       var filepath = path.join( mdFolder, file )
-      var postKey = path.parse(file).name
+
       fs.readFile(filepath, 'utf8', function(err, data){
         if (err) throw err
 
-        var content = fm(data)
-        content.attributes["body"]=content.body
-        stringContent.push(JSON.stringify(content.attributes))
+        stringContent.push(JSON.parse(data))
 
-        if (index === array.length - 1){ 
-          var newData = 'var data = {' + layout + ': [' + stringContent + ']} \r\n'
+        itemsProcessed++
+
+        if (itemsProcessed === array.length){
+          stringContent.sort(function(a,b){
+            // Turn your strings into dates, and then subtract them
+            // to get a value that is either negative, positive, or zero.
+            return new Date(b.date) - new Date(a.date)
+          })
+
+          var newData = 'var data = {' + layout + ': ' + JSON.stringify(stringContent) + '} \r\n'
           fs.writeFile(dataFile, newData, 'utf8', function (err) {
             if (err) return console.log(err)
           })
