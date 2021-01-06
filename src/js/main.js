@@ -102,7 +102,7 @@ particlesJS("particles", {
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 4,
+        "speed": 2,
         "size_min": 0.3,
         "sync": false
       }
@@ -116,7 +116,7 @@ particlesJS("particles", {
     },
     "move": {
       "enable": true,
-      "speed": 0.1,
+      "speed": 4,
       "direction": "none",
       "random": true,
       "straight": false,
